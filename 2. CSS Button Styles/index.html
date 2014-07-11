@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Button Styles</title>
+
+    <style>
+        body { 
+            /*background-color: #41ccff;*/
+            background: url('bg.jpg') top center repeat;
+        }
+
+        #main-content {
+        	margin: 0 auto;
+        	max-width: 960px;
+        }
+
+        .page-title { 
+            color: #fff;
+            text-align: center; 
+            font-size: 50px;
+            font-family: Arial, Verdana, sans-serif;
+        }
+
+        .code,
+        .output {
+        	float: left;
+        }
+
+        .code {
+        	padding: 0 2%;
+        	margin-right: 2%;
+        	margin-bottom: 40px;
+        	width: 54%;
+        	background-color: #fff;
+        	white-space: pre;
+
+        	-webkit-border-radius: 10px;
+        	-moz-border-radius: 10px;
+        	border-radius: 10px;
+        }
+
+        .code pre { white-space: pre-wrap; }
+
+        .output { width: 38%; }
+
+        .btn-code {
+        	padding: 10px;
+        	width: 230px;
+        	background-color: #f8ed94;
+        	color: #000;
+        	white-space: pre-wrap;
+        	font-weight: 700;
+        	font-size: 0.9em;
+        }
+
+        .btn-item {
+        	display: block;
+        	clear: both;
+        	margin-bottom: 20px;
+        }
+
+        .btn {
+            display: block;
+            padding: 16px 20px;
+            width: 200px;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1.3em;
+            font-family: Arial, Verdana, sans-serif;
+        }
+
+        .btn:after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
+        }
+
+        .btn-1 {
+            border: 2px solid #fff;
+
+            -webkit-transition: border-radius 0.5s ease-in-out;
+            -khtml-transition:  border-radius 0.5s ease-in-out;
+            -moz-transition:    border-radius 0.5s ease-in-out;
+            -o-transition:      border-radius 0.5s ease-in-out;
+            transition:         border-radius 0.5s ease-in-out;
+        }
+
+        .btn-1:hover {
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            border-radius: 15px;
+        }
+
+        .btn-2 {
+            color: #fff;
+            border: 2px solid #fff;
+
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            border-radius: 10px;
+
+            -webkit-transition: all 0.5s ease-in-out;
+            -khtml-transition:  all 0.5s ease-in-out;
+            -moz-transition:    all 0.5s ease-in-out;
+            -o-transition:      all 0.5s ease-in-out;
+            transition:         all 0.5s ease-in-out;
+        }
+
+        .btn-2:hover {
+            border-color: #ff488d;
+            color: #ff488d;
+        }
+
+        .btn-2:active { 
+            border-color: #ff488d;
+            background-color: #ff488d;
+            color: #fff;
+        }
+
+
+        .btn-3 {
+            position: relative;
+            border: 2px solid #fff;
+            color: #fff;
+
+            -webkit-transition: all 0.5s ease-out;
+            -khtml-transition:  all 0.5s ease-out;
+            -moz-transition:    all 0.5s ease-out;
+            -o-transition:      all 0.5s ease-out;
+            transition:         all 0.5s ease-out;
+        }
+
+        .btn-3:after {
+            width: 0%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: #fff;
+        }
+
+        .btn-3:hover,
+        .btn-3:active {
+            color: #00658a;
+        }
+
+        .btn-3:hover:after,
+        .btn-3:active:after {
+            width: 100%;
+        }
+
+        .btn-4 {
+            position: relative;
+            border: 2px solid #fff;
+            color: #fff;
+        }
+
+        .btn-4:before {
+            position: absolute;
+            display: block;
+            content: ' ❯ ';
+            width: 24px;
+            height: 24px;
+            right: 0;
+            opacity: 0;
+
+            -webkit-transition: right 0.5s ease-out;
+            -khtml-transition:  right 0.5s ease-out;
+            -moz-transition:    right 0.5s ease-out;
+            -o-transition:      right 0.5s ease-out;
+            transition:         right 0.5s ease-out;
+        }
+
+        .btn-4:hover:before { 
+            right: 10%; 
+            opacity: 1; 
+        }
+
+        .btn-5 {
+            display: block;
+            position: relative;
+
+            transition-delay: 0s;
+            transition-duration: 0.25s;
+            transition-property: border-color, background;
+        }
+
+        .btn-5 .text {
+            position: relative;
+            z-index: 2;
+            display: block;
+            width: 200px;
+            border: 3px solid #fffce1;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 50px;
+        }
+
+        .btn-5 .frame {
+            position: absolute;
+            top: 16px;
+            left: 20px;
+            display: block;
+            width: 200px;
+            height: 50px;
+
+            border: 3px solid #ff488d;
+            transition-delay: 0s;
+            transition-duration: 0.25s;
+            transition-property: border, width, height;
+        }
+
+        .btn-5:hover .frame {
+            width: 0;
+            height: 0;
+            border-width: 28px 103px;
+            border-style: solid;
+            border-color: #ff488d;
+        }
+
+        .btn-5:hover .text { 
+            border-color: #ff488d;
+            color: #fff; 
+        }
+
+        .btn-6 {
+            position: relative;
+            display: block;
+            padding: 20px 12px;
+            background-color: #fff;
+            color: #000;
+            font-size: 16px;
+            text-align: left;
+
+            -webkit-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+
+        .btn-6 .arrow-right {
+            position: absolute;
+            top: 0;
+            right: -10px;
+            display: block;
+            padding: 0 20px;
+            height: 100%;
+            background: url('arrow-right.png') center center no-repeat #cfcfcf;
+        }
+
+        .btn-6:hover {
+            padding-right: 26px;
+            background-color: #cfcfcf;
+        }
+
+    </style>
+</head>
+<body>
+    <section id="main-content">
+        <header>
+            <h1 class="page-title">CSS Button Styles</h1>
+        </header>
+
+        <div class="btn-cols">
+        	<div class="button-1 btn-item clearfix">
+        		<div class="code">
+        			<pre>
+.btn-1 {
+    border: 2px solid #fff;
+
+    -webkit-transition: border-radius 0.5s ease-in-out;
+    -khtml-transition:  border-radius 0.5s ease-in-out;
+    -moz-transition:    border-radius 0.5s ease-in-out;
+    -o-transition:      border-radius 0.5s ease-in-out;
+    transition:         border-radius 0.5s ease-in-out;
+}
+
+.btn-1:hover {
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+        			</pre>
+        		</div>
+        		<div class="output">
+        			<a href="#" class="btn-1 btn">
+                    	Login   
+                	</a>
+
+<pre class="btn-code">
+&lt;a href="#" class="btn-1 btn"&gt;
+	Login   
+&lt;/a&gt;
+</pre>
+        		</div>
+        	</div>
+
+
+        	<div class="button-2 btn-item clearfix">
+        		<div class="code">
+					<pre>
+.btn-2 {
+    color: #fff;
+    border: 2px solid #fff;
+
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+
+    -webkit-transition: all 0.5s ease-in-out;
+    -khtml-transition:  all 0.5s ease-in-out;
+    -moz-transition:    all 0.5s ease-in-out;
+    -o-transition:      all 0.5s ease-in-out;
+    transition:         all 0.5s ease-in-out;
+}
+
+.btn-2:hover {
+    border-color: #ff488d;
+    color: #ff488d;
+}
+
+.btn-2:active { 
+    border-color: #ff488d;
+    background-color: #ff488d;
+    color: #fff;
+}
+					</pre>
+        		</div>
+        		<div class="output">
+        			<a href="#" class="btn-2 btn">
+                    	Reserve Now!
+                	</a>
+
+<pre class="btn-code">
+&lt;a href="#" class="btn-2 btn"&gt;
+	Reserve Now!
+&lt;/a&gt;
+</pre>
+        		</div>
+        	</div>
+
+
+
+        	<div class="button-3 btn-item clearfix">
+        		<div class="code">
+        			<pre>
+.btn-3 {
+    position: relative;
+    border: 2px solid #fff;
+    color: #fff;
+
+    -webkit-transition: all 0.5s ease-out;
+    -khtml-transition:  all 0.5s ease-out;
+    -moz-transition:    all 0.5s ease-out;
+    -o-transition:      all 0.5s ease-out;
+    transition:         all 0.5s ease-out;
+}
+
+.btn-3:after {
+    width: 0%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+.btn-3:hover,
+.btn-3:active {
+    color: #00658a;
+}
+
+.btn-3:hover:after,
+.btn-3:active:after {
+    width: 100%;
+}
+
+        			</pre>
+        		</div>
+        		<div class="output">
+        			<a href="#" class="btn-3 btn">
+	                    Send    
+	                </a>
+
+<pre class="btn-code">
+&lt;a href="#" class="btn-3 btn"&gt;
+	Send
+&lt;/a&gt;
+</pre>
+        		</div>
+        	</div>
+
+
+
+        	<div class="button-4 btn-item clearfix">
+        		<div class="code">
+        			<pre>
+.btn-4 {
+    position: relative;
+    border: 2px solid #fff;
+    color: #fff;
+}
+
+.btn-4:before {
+    position: absolute;
+    display: block;
+    content: ' ❯ ';
+    width: 24px;
+    height: 24px;
+    right: 0;
+    opacity: 0;
+
+    -webkit-transition: right 0.5s ease-out;
+    -khtml-transition:  right 0.5s ease-out;
+    -moz-transition:    right 0.5s ease-out;
+    -o-transition:      right 0.5s ease-out;
+    transition:         right 0.5s ease-out;
+}
+
+.btn-4:hover:before { 
+    right: 10%; 
+    opacity: 1; 
+}
+        			</pre>
+        		</div>
+        		<div class="output">
+        			<a href="#" class="btn-4 btn">
+                    	Read More   
+                	</a>
+
+<pre class="btn-code">
+&lt;a href="#" class="btn-4 btn"&gt;
+	Read More
+&lt;/a&gt;
+</pre>
+        		</div>
+        	</div>
+
+			
+        	<div class="button-5 btn-item clearfix">
+        		<div class="code">
+        			<pre>
+.btn-5 {
+    display: block;
+    position: relative;
+
+    transition-delay: 0s;
+    transition-duration: 0.25s;
+    transition-property: border-color, background;
+}
+
+.btn-5 .text {
+    position: relative;
+    z-index: 2;
+    display: block;
+    width: 200px;
+    border: 3px solid #fffce1;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 50px;
+}
+
+.btn-5 .frame {
+    position: absolute;
+    top: 16px;
+    left: 20px;
+    display: block;
+    width: 200px;
+    height: 50px;
+
+    border: 3px solid #ff488d;
+    transition-delay: 0s;
+    transition-duration: 0.25s;
+    transition-property: border, width, height;
+}
+
+.btn-5:hover .frame {
+    width: 0;
+    height: 0;
+    border-width: 28px 103px;
+    border-style: solid;
+    border-color: #ff488d;
+}
+
+.btn-5:hover .text { 
+    border-color: #ff488d;
+    color: #fff; 
+}
+        			</pre>
+        		</div>
+        		<div class="output">
+        			<a href="#" class="btn-5 btn">
+	                    <span class="text">View Website</span>
+	                    <span class="frame"></span>
+	                </a>
+
+<pre class="btn-code">
+&lt;a href="#" class="btn-5 btn"&gt;
+	Reserve Now!
+&lt;/a&gt;
+</pre>
+        		</div>
+        	</div>
+
+        	<div class="button-6 btn-item clearfix">
+        		<div class="code">
+        			<pre>
+.btn-6 {
+    position: relative;
+    display: block;
+    padding: 20px 12px;
+    background-color: #fff;
+    color: #000;
+    font-size: 15px;
+    text-align: left;
+
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.btn-6 .arrow-right {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    display: block;
+    padding: 0 20px;
+    height: 100%;
+    background: url('arrow-right.png') center center no-repeat #cfcfcf;
+}
+
+.btn-6:hover {
+    padding-right: 26px;
+    background-color: #cfcfcf;
+}
+        			</pre>
+        		</div>
+        		<div class="output">
+        			<a href="#" class="btn-6 btn">
+	                    <span class="text">View All Products</span>
+	                    <span class="arrow-right"></span>
+	                </a>
+
+<pre class="btn-code">
+&lt;a href="#" class="btn-6 btn"&gt;
+	View all Products
+&lt;/a&gt;
+</pre>
+        		</div>
+        	</div>
+
+
+        </div>
+     </section> 
+</body>
+</html>
