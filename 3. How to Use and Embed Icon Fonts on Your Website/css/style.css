@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'fontello';
+    src: url('../fonts/fontello.eot?7123478');
+    src: url('../fonts/fontello.eot?7123478#iefix') format('embedded-opentype'),
+       url('../fonts/fontello.woff?7123478') format('woff'),
+       url('../fonts/fontello.ttf?7123478') format('truetype'),
+       url('../fonts/fontello.svg?7123478#fontello') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icon-"]:before, /*match elements that have an attribute containing a value that starts with the specified value*/
+[class*=" icon-"]:before { /*match elements that contain a specified value */
+    display: inline-block;
+    margin-right: .2em;
+    text-align: center;
+    font-size: 4em;
+    font-family: "fontello";
+    speak: none; /* VoiceOver on OS X does read the content of pseudo elements. */   
+    /*text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7); */
+}
+ 
+.icon-thumbs-up:before { 
+  content: '\e800'; 
+  color: #2b67d5;
+} /* '' */
+
+.icon-music:before { 
+  content: '\e801'; 
+  color: #ff651a;
+} /* '' */
+
+.icon-heart:before { 
+  content: '\e802'; 
+  color: #ff1b3b;
+} /* '' */
+
+
+/* For Stand-alone icons */
+[data-icon]:before {
+    font-family: fontello;
+    content: attr(data-icon);
+ }
+
+.icon-thumbs-up-2:before { color: #23bcaf; }
+
+.icon-music-2:before { color: #dc4fcd; }
+
+.icon-heart-2:before { color: #d2bc00; }
+
+
+#main-content {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2em;
+  font-family: Arial, Tahoma, sans-serif;
+}
+
