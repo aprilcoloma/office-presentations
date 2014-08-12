@@ -4,6 +4,8 @@ Benefits of Using Icon Fonts:
 2. Icon Fonts can replace CSS image sprites.
 3. They have transparent backgrounds that really work in old versions of Internet Explorer.
 4. You can easily shadow your shape.
+5. Can be designed on the fly (by making changes on :hover, etc.)
+6. Have good browser support in general
 
 
 Resources:
@@ -11,3 +13,7 @@ http://fontello.com/ *Font Awesome*
 
 1. Select the icon font that you like
 2. Download webfont
+
+References:
+http://css-tricks.com/examples/IconFont/
+http://css-tricks.com/html-for-icon-font-usage/
