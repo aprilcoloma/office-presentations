@@ -1,0 +1,50 @@
+@-webkit-keyframes speak {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@-moz-keyframes speak {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+
+
+.line { 
+	-webkit-animation: speak 1s 1s ease-out infinite; 
+	-moz-animation: speak 1s 1s ease-out infinite; 
+	animation: speak 1s 1s ease-out infinite; 
+/*
+	-webkit-animation-name: speak;
+	-moz-animation-name: speak;
+
+	-webkit-animation-duration: 1s;
+	-moz-animation-duration: 1s;
+
+	-moz-animation-timing-function: ease-out;
+	-webkit-animation-timing-function: ease-out;
+
+	-moz-animation-iteration-count: infinite;
+	-webkit-animation-iteration-count: infinite;
+
+	-webkit-animation-delay: 2s;
+	-moz-animation-delay: 2s;*/
+}
+
+.line-1 { 
+	-webkit-animation-delay: 0.1s; 
+	-moz-animation-delay: 0.1s; 
+	animation-delay: 0.1s; 
+}
+
+.line-2 { 
+	-webkit-animation-delay: 0.2s; 
+	-moz-animation-delay: 0.2s; 
+	animation-delay: 0.2s; 
+}
+
+.line-3 { 
+	-webkit-animation-delay: 0.3s;
+	-moz-animation-delay: 0.3s;
+	animation-delay: 0.3s;
+}

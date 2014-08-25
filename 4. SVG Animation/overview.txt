@@ -1,0 +1,12 @@
+**SVG Animation**
+
+1. Download an SVG icon that you want to animate
+recommended site: http://www.flaticon.com
+
+2. Optimise your SVG file by removing unnecessary codes
+recommended site: http://petercollingridge.appspot.com/svg-optimiser
+
+3. Include the SVG file in your HTML file and style and animate it
+
+References:
+http://css-tricks.com/using-svg/
